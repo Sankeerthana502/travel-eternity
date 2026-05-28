@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Travel Blueprint</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<h1>Travel Blueprint</h1>
+
+<p><b>User:</b> {{ username }}</p>
+
+<p><b>Email:</b> {{ email }}</p>
+
+<p><b>Destination:</b> {{ destination }}</p>
+
+<p><b>Interest Area:</b> {{ interest }}</p>
+
+<p><b>Travel Type:</b> {{ travel_type }}</p>
+
+<p><b>Budget:</b> {{ budget }}</p>
+
+<p><b>Trip Duration:</b> {{ days }} Days</p>
+
+<p><b>Accommodation:</b> {{ accommodation }}</p>
+
+<h2>Day-wise Travel Plan</h2>
+
+{% for day in itinerary %}
+
+    <p>{{ day }}</p>
+
+{% endfor %}
+
+</body>
+</html>
